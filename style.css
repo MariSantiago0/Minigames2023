@@ -1,11 +1,11 @@
-.tetris{
+.gameContainer{
   box-shadow: none; /* Outras propriedades CSS do botão */
   color:white;
   background-color: white;
 }
 
-.tetrisbutton{
-  background-image: url(imgs/tetrisGif.gif);
+.velhabtn{
+  background-image: url(imgs/pega.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,14 +13,15 @@
   padding: 10px;
   border-radius: 5px;
   width: 200px;
-  height: 100px;
+  height: 150px;
  
 }
 
-a {
-  color: white;
+.velha {
+  color: rgb(0, 0, 0);
   font-size: 20px;
-  font-weight: bold;
+  font-weight:bold;
   text-decoration: none; /* Remove o sublinhado do link */
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
