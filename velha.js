@@ -21,7 +21,7 @@ initializeGame();// iniciando o jogo
 function initializeGame() {// funçao para iniciar o jogo
   cells.forEach(cell => cell.addEventListener("click", cellClick));// cada cell irá ter um event listener que ficara de olho na hora de clicar na cell
   restartbtn.addEventListener("click", restartGame);// e tbm ficara esperto quando clicar nessa
-  statusText.textContent = `${currentPlayer}'s turn`;// basicamente é um textinho que mostra qual é o proximo jogador
+  statusText.textContent = `vez do ${currentPlayer}`;// basicamente é um textinho que mostra qual é o proximo jogador
   running = true;// ta rodando o jogo
 }
 
@@ -44,7 +44,7 @@ function updateCell(cell, index) {// atualiza celula e marca atual jogador
 
 function changePlayer() {// função para trocar de jogador 
   currentPlayer = currentPlayer === "X" ? "O" : "X";// como o primeiro é o X, ele se questiona se é "X" e se for ele vai trocar para ser "O" na proxima e assim continua
-  statusText.textContent = `${currentPlayer}'s turn`;// atualiza no elemento html
+  statusText.textContent = `vez do ${currentPlayer}`;// atualiza no elemento html
 }
 
 function checkWinner() {// verifica se algum jogador ganhou. Ela é chamada sempre que um jogador faz uma jogada pra ver se ele ganhou ou se o jogo empatou.
@@ -80,7 +80,7 @@ function checkWinner() {// verifica se algum jogador ganhou. Ela é chamada semp
 function restartGame() {// limpar os Xs e Os, o tabuleiro né caralho
   currentPlayer = "X";// jogador atual
   options = ["", "", "", "", "", "", "", "", ""];// cells vazias
-  statusText.textContent = `${currentPlayer}'s turn`;// jogador atual no elemento html
+  statusText.textContent = `vez do ${currentPlayer} `;// jogador atual no elemento html
   cells.forEach(cell => (cell.textContent = ""));// cada cell vai ser limpada, ser esvaziada
   running = true;// rodar o jogo
 }

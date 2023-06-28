@@ -1,3 +1,4 @@
+
 .cell{
   width: 75px;
   height: 75px;
@@ -17,8 +18,66 @@
   width:225px;
   margin: auto;
 }
-.restartbtn{
-  width: 80px;
-  height:40px;
-  font-size: medium;
+/* Estilos básicos do botão */
+.restartbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #50c5ce;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
 }
+
+/* Efeito hover */
+.restartbtn:hover {
+  background-color: #4b96a3;
+}
+
+/* Efeito de pressionar o botão */
+.restartbtn:active {
+  background-color: #63b4c9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de texto interno no botão */
+.restartbtn span {
+  display: inline-block;
+  position: relative;
+}
+
+/* Estilo do texto "press start" dentro do botão */
+.restartbtn span::before {
+  content: "PRESS ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
+
+.restartbtn span::after {
+  content: " START";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+}
+
+
+.column{
+  display: grid;
+  grid-template-columns: (2, auto);
+ 
+}
+.cat{
+  width:300px;
+  height:160px;
+  padding-left: 200px;
+}
+
+
